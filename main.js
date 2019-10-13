@@ -1,3 +1,34 @@
+
+var WS;
+
+function CreateSocket()
+{
+    if ("WebSocket" in window)
+    {
+        console.log("WebSocket Soportado");
+    } else 
+    {
+        console.log("WebSocket NO SOPORTADO");
+    }
+
+    WS = new WebSocket("wss://echo.websocket.org/");
+    WS.onopen = function()
+    {
+        console.log("Conexion abierta Abierto");
+        WS.send("PING");
+    }
+    WS.onerror = function()
+    {
+        console.log("Error de conexion con el servidor");
+    }
+    WS.onmessage = function(data)
+    {
+        console.log("Data incoming...");
+        console.log(data);
+    }
+
+}
+
 function CreateDialogJQUERY(cont) {
     $(cont).dialog({
         autoOpen: true,

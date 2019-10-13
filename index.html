@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 		<script type="text/javascript" src="main.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -10,8 +9,10 @@
 		<script>
 			$( document ).ready(function()
 				{
-					CreateGrid("#Container",40);
+					CreateGrid("#ContainerArmy",40);
+					CreateGrid("#ContainerControl",40);
 					CreateDialogJQUERY("#dialogContainer");
+					CreateSocket();
 
 			});
 		</script>
@@ -19,9 +20,12 @@
 	</head>
 	<body>
 		<div id="dialogContainer">
-			<svg width="0px" height="0px" id="Container">
+			<svg width="0px" height="0px" id="ContainerArmy">
+			</svg>
+			<svg width="0px" height="0px" id="ContainerControl">
 			</svg>
 		</div>
+
 	</body>
 	
 </html>
