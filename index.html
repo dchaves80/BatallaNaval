@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script>
+			$( document ).ready(function()
+				{
+					CreateGrid("#Container",40);
+					CreateDialogJQUERY("#dialogContainer");
+
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<div id="dialogContainer">
+			<svg width="0px" height="0px" id="Container">
+			</svg>
+		</div>
+	</body>
+	
+</html>
