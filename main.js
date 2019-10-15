@@ -11,7 +11,7 @@ function CreateSocket()
         console.log("WebSocket NO SOPORTADO");
     }
 
-    WS = new WebSocket("wss://echo.websocket.org/");
+    WS = new WebSocket("ws://localhost:4005","MyProtocol");
     WS.onopen = function()
     {
         console.log("Conexion abierta Abierto");
@@ -27,6 +27,12 @@ function CreateSocket()
         console.log(data);
     }
 
+}
+
+function sendWS(objectString)
+{
+
+    WS.send($(objectString).val());
 }
 
 function CreateDialogJQUERY(cont) {
